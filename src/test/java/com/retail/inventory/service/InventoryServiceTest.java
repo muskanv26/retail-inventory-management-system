@@ -16,6 +16,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.orm.ObjectOptimisticLockingFailureException;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -218,5 +219,32 @@ class InventoryServiceTest {
         inventoryService.deleteInventory(inventoryId);
 
         verify(inventoryRepository).deleteById(inventoryId);
+    }
+
+    @Test
+    void inventory_VersionFieldMapping_Success() {
+        sampleInventory.setVersion(1L);
+        when(inventoryRepository.findById(inventoryId)).thenReturn(Optional.of(sampleInventory));
+
+        InventoryResponse response = inventoryService.getInventoryById(inventoryId);
+
+        assertThat(response).isNotNull();
+        assertThat(response.getVersion()).isEqualTo(1L);
+    }
+
+    @Test
+    void updateInventory_OptimisticLockingFailure_ThrowsOptimisticLockingFailureException() {
+        UpdateInventoryRequest request = UpdateInventoryRequest.builder()
+                .quantityOnHand(120)
+                .quantityReserved(30)
+                .reorderLevel(15)
+                .build();
+
+        when(inventoryRepository.findById(inventoryId)).thenReturn(Optional.of(sampleInventory));
+        when(inventoryRepository.save(any(Inventory.class)))
+                .thenThrow(new ObjectOptimisticLockingFailureException(Inventory.class, inventoryId));
+
+        assertThatThrownBy(() -> inventoryService.updateInventory(inventoryId, request))
+                .isInstanceOf(ObjectOptimisticLockingFailureException.class);
     }
 }

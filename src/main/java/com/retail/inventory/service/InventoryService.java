@@ -119,6 +119,7 @@ public class InventoryService {
                 .quantityAvailable(available)
                 .reorderLevel(inventory.getReorderLevel())
                 .reorderNeeded(reorderNeeded)
+                .version(inventory.getVersion())
                 .createdAt(inventory.getCreatedAt())
                 .updatedAt(inventory.getUpdatedAt())
                 .build();

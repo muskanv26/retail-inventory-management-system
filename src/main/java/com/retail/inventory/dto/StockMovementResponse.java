@@ -1,5 +1,6 @@
 package com.retail.inventory.dto;
 
+import com.retail.inventory.entity.StockMovementType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,18 +13,16 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class InventoryResponse {
+public class StockMovementResponse {
     private UUID id;
+    private UUID inventoryId;
     private UUID productId;
     private String productSku;
     private String productName;
     private String warehouseCode;
-    private Integer quantityOnHand;
-    private Integer quantityReserved;
-    private Integer quantityAvailable;
-    private Integer reorderLevel;
-    private boolean reorderNeeded;
-    private Long version;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private StockMovementType type;
+    private Integer quantity;
+    private String referenceNumber;
+    private String reason;
+    private LocalDateTime timestamp;
 }

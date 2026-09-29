@@ -4,10 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.retail.inventory.dto.CreateInventoryRequest;
 import com.retail.inventory.dto.InventoryResponse;
 import com.retail.inventory.dto.UpdateInventoryRequest;
+import com.retail.inventory.entity.Inventory;
 import com.retail.inventory.exception.InvalidInventoryException;
 import com.retail.inventory.exception.ResourceAlreadyExistsException;
 import com.retail.inventory.exception.ResourceNotFoundException;
 import com.retail.inventory.service.InventoryService;
+import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -216,5 +218,24 @@ class InventoryControllerTest {
 
         mockMvc.perform(delete("/api/v1/inventory/{id}", nonExistingId))
                 .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void updateInventory_OptimisticLockingConflict_ReturnsConflict() throws Exception {
+        UpdateInventoryRequest request = UpdateInventoryRequest.builder()
+                .quantityOnHand(120)
+                .quantityReserved(30)
+                .reorderLevel(15)
+                .build();
+
+        when(inventoryService.updateInventory(eq(inventoryId), any(UpdateInventoryRequest.class)))
+                .thenThrow(new ObjectOptimisticLockingFailureException(Inventory.class, inventoryId));
+
+        mockMvc.perform(put("/api/v1/inventory/{id}", inventoryId)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isConflict())
+                .andExpect(jsonPath("$.error").value("Conflict"))
+                .andExpect(jsonPath("$.message").value("The inventory resource was modified by another transaction. Please retry."));
     }
 }
