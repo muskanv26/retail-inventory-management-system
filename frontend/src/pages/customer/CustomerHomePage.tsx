@@ -72,13 +72,13 @@ export const CustomerHomePage: React.FC = () => {
   const featuredProducts = products.slice(0, 8);
 
   return (
-    <div className="VELORA-homepage">
+    <div className="VALERUNE-homepage">
       {/* HERO CAMPAIGN SECTION */}
-      <section className="VELORA-hero-section">
+      <section className="VALERUNE-hero-section">
         <div className="hero-backdrop-image">
           <img
             src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600&auto=format&fit=crop&q=80"
-            alt="VELORA Essential Collection"
+            alt="VALERUNE Essential Collection"
             className="hero-bg-img"
           />
           <div className="hero-overlay-gradient"></div>
@@ -97,11 +97,11 @@ export const CustomerHomePage: React.FC = () => {
               Clean silhouettes, durable fabrics, and functional daily apparel designed for elevated living.
             </p>
             <div className="hero-cta-buttons">
-              <Link to="/shop" className="btn-VELORA-primary">
+              <Link to="/shop" className="btn-VALERUNE-primary">
                 <span>EXPLORE ALL CATALOG</span>
                 <ArrowRight size={16} />
               </Link>
-              <Link to="/shop?new=true" className="btn-VELORA-outline">
+              <Link to="/shop?new=true" className="btn-VALERUNE-outline">
                 <span>NEW ARRIVALS</span>
               </Link>
             </div>
@@ -110,7 +110,7 @@ export const CustomerHomePage: React.FC = () => {
       </section>
 
       {/* CATEGORY DISCOVERY SECTION */}
-      <section className="VELORA-section">
+      <section className="VALERUNE-section">
         <div className="section-header-centered">
           <span className="section-sub">CURATED TAXONOMY</span>
           <h2 className="section-title">Shop by Category</h2>
@@ -135,7 +135,7 @@ export const CustomerHomePage: React.FC = () => {
       </section>
 
       {/* FEATURED PRODUCTS SECTION */}
-      <section className="VELORA-section bg-cream-soft">
+      <section className="VALERUNE-section bg-cream-soft">
         <div className="section-header-flex">
           <div>
             <span className="section-sub">RECENT RELEASE</span>
@@ -156,7 +156,7 @@ export const CustomerHomePage: React.FC = () => {
         ) : error ? (
           <div className="fashion-error-box">
             <p>{error}</p>
-            <button onClick={() => window.location.reload()} className="btn-VELORA-primary" style={{ marginTop: '1rem' }}>
+            <button onClick={() => window.location.reload()} className="btn-VALERUNE-primary" style={{ marginTop: '1rem' }}>
               RETRY
             </button>
           </div>
@@ -174,12 +174,12 @@ export const CustomerHomePage: React.FC = () => {
       </section>
 
       {/* EDITORIAL BANNER */}
-      <section className="VELORA-editorial-banner">
+      <section className="VALERUNE-editorial-banner">
         <div className="editorial-container">
           <div className="editorial-img-side">
             <img
               src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1000&auto=format&fit=crop&q=80"
-              alt="VELORA Utility & Accessories"
+              alt="VALERUNE Utility & Accessories"
               loading="lazy"
             />
           </div>
@@ -187,9 +187,9 @@ export const CustomerHomePage: React.FC = () => {
             <span className="editorial-label">MATERIALS HIGHLIGHT</span>
             <h2 className="editorial-title">Travel &amp; Carry Essentials</h2>
             <p className="editorial-desc">
-              Every tote, duffle, and backpack in the VELORA Elements line uses durable water-repellent canvas, reinforced stitching, and heavy-duty zippers built for long travel durability.
+              Every tote, duffle, and backpack in the VALERUNE Elements line uses durable water-repellent canvas, reinforced stitching, and heavy-duty zippers built for long travel durability.
             </p>
-            <Link to="/shop?category=Travel" className="btn-VELORA-primary">
+            <Link to="/shop?category=Travel" className="btn-VALERUNE-primary">
               <span>DISCOVER TRAVEL GEAR</span>
               <ArrowRight size={16} />
             </Link>
@@ -198,7 +198,7 @@ export const CustomerHomePage: React.FC = () => {
       </section>
 
       {/* BEST SELLERS HIGHLIGHT */}
-      <section className="VELORA-section">
+      <section className="VALERUNE-section">
         <div className="section-header-centered">
           <span className="section-sub">TOP RATED</span>
           <h2 className="section-title">Customer Favorites</h2>
@@ -220,4 +220,5 @@ export const CustomerHomePage: React.FC = () => {
     </div>
   );
 };
+
 

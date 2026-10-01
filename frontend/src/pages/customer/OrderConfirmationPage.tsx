@@ -23,7 +23,7 @@ export const OrderConfirmationPage: React.FC = () => {
   });
 
   return (
-    <div className="VELORA-confirmation-page">
+    <div className="VALERUNE-confirmation-page">
       <div className="confirmation-card">
         {/* CELEBRATION ICON */}
         <div className="confirmation-icon-wrapper">
@@ -76,12 +76,12 @@ export const OrderConfirmationPage: React.FC = () => {
 
         {/* CTAS */}
         <div className="confirmation-actions">
-          <Link to="/orders" className="btn-VELORA-primary">
+          <Link to="/orders" className="btn-VALERUNE-primary">
             <Truck size={16} />
             <span>TRACK MY ORDERS</span>
           </Link>
 
-          <Link to="/shop" className="btn-VELORA-outline">
+          <Link to="/shop" className="btn-VALERUNE-outline">
             <span>CONTINUE SHOPPING</span>
             <ArrowRight size={16} />
           </Link>
@@ -90,4 +90,5 @@ export const OrderConfirmationPage: React.FC = () => {
     </div>
   );
 };
+
 

@@ -17,7 +17,7 @@ export const CustomerAccountPage: React.FC = () => {
   };
 
   return (
-    <div className="VELORA-account-page">
+    <div className="VALERUNE-account-page">
       <div className="account-container">
         <h1 className="account-title">MY ACCOUNT</h1>
         <p className="account-subtitle">Manage your profile, shipping addresses &amp; order history</p>
@@ -30,8 +30,8 @@ export const CustomerAccountPage: React.FC = () => {
                 {user?.name?.substring(0, 2).toUpperCase() || 'VN'}
               </div>
               <div className="user-details">
-                <h3 className="user-name">{user?.name || 'VELORA Customer'}</h3>
-                <span className="user-email">{user?.email || 'customer@VELORA.test'}</span>
+                <h3 className="user-name">{user?.name || 'VALERUNE Customer'}</h3>
+                <span className="user-email">{user?.email || 'customer@VALERUNE.test'}</span>
               </div>
             </div>
 
@@ -98,7 +98,7 @@ export const CustomerAccountPage: React.FC = () => {
 
                   <div className="info-field">
                     <label>Email Address</label>
-                    <strong>{user?.email || 'customer@VELORA.test'}</strong>
+                    <strong>{user?.email || 'customer@VALERUNE.test'}</strong>
                   </div>
 
                   <div className="info-field">
@@ -109,7 +109,7 @@ export const CustomerAccountPage: React.FC = () => {
                   <div className="info-field">
                     <label>Account Status</label>
                     <span style={{ color: '#059669', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                      <ShieldCheck size={16} /> Verified VELORA Member
+                      <ShieldCheck size={16} /> Verified VALERUNE Member
                     </span>
                   </div>
                 </div>
@@ -117,10 +117,10 @@ export const CustomerAccountPage: React.FC = () => {
                 <div className="account-quick-links" style={{ marginTop: '2.5rem' }}>
                   <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>Quick Actions</h4>
                   <div className="quick-buttons-row">
-                    <Link to="/orders" className="btn-VELORA-primary">
+                    <Link to="/orders" className="btn-VALERUNE-primary">
                       <ShoppingBag size={16} /> VIEW RECENT ORDERS
                     </Link>
-                    <Link to="/wishlist" className="btn-VELORA-outline">
+                    <Link to="/wishlist" className="btn-VALERUNE-outline">
                       <Heart size={16} /> VIEW SAVED WISHLIST
                     </Link>
                   </div>
@@ -160,7 +160,7 @@ export const CustomerAccountPage: React.FC = () => {
 
             {activeTab === 'help' && (
               <div className="account-panel">
-                <h3 className="panel-title">VELORA Customer Support</h3>
+                <h3 className="panel-title">VALERUNE Customer Support</h3>
                 <p style={{ color: 'var(--store-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '2rem' }}>
                   Have questions about an order, shipment, or return? Our dedicated support team is available 7 days a week.
                 </p>
@@ -168,11 +168,11 @@ export const CustomerAccountPage: React.FC = () => {
                 <div className="help-contacts-grid">
                   <div className="help-contact-box">
                     <h4>EMAIL SUPPORT</h4>
-                    <p>support@VELORA.test</p>
+                    <p>support@VALERUNE.test</p>
                   </div>
                   <div className="help-contact-box">
                     <h4>HELPLINE</h4>
-                    <p>1800-200-VELORA (Mon-Sun 9AM - 8PM)</p>
+                    <p>1800-200-VALERUNE (Mon-Sun 9AM - 8PM)</p>
                   </div>
                 </div>
               </div>
@@ -183,4 +183,5 @@ export const CustomerAccountPage: React.FC = () => {
     </div>
   );
 };
+
 

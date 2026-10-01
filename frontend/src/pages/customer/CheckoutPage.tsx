@@ -87,20 +87,20 @@ export const CheckoutPage: React.FC = () => {
 
   if (cartItems.length === 0) {
     return (
-      <div className="VELORA-cart-empty-page">
+      <div className="VALERUNE-cart-empty-page">
         <div className="empty-cart-card">
           <h2>Your bag is empty</h2>
           <p style={{ color: 'var(--store-text-secondary)', margin: '1rem 0 2rem' }}>
             Add products before proceeding to checkout.
           </p>
-          <Link to="/shop" className="btn-VELORA-primary">Browse Catalog</Link>
+          <Link to="/shop" className="btn-VALERUNE-primary">Browse Catalog</Link>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="VELORA-checkout-page">
+    <div className="VALERUNE-checkout-page">
       <div className="checkout-container">
         <Link to="/cart" className="return-cart-link">
           <ArrowLeft size={16} /> Return to Shopping Bag
@@ -133,7 +133,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
-                      className="VELORA-form-input"
+                      className="VALERUNE-form-input"
                     />
                   </div>
                   <div className="form-field">
@@ -143,7 +143,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="VELORA-form-input"
+                      className="VALERUNE-form-input"
                     />
                   </div>
                   <div className="form-field">
@@ -153,7 +153,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="VELORA-form-input"
+                      className="VALERUNE-form-input"
                     />
                   </div>
                 </div>
@@ -173,7 +173,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
-                      className="VELORA-form-input"
+                      className="VALERUNE-form-input"
                     />
                   </div>
                   <div className="form-field">
@@ -183,7 +183,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
-                      className="VELORA-form-input"
+                      className="VALERUNE-form-input"
                     />
                   </div>
                   <div className="form-field">
@@ -193,7 +193,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={state}
                       onChange={(e) => setState(e.target.value)}
-                      className="VELORA-form-input"
+                      className="VALERUNE-form-input"
                     />
                   </div>
                   <div className="form-field">
@@ -203,7 +203,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={postalCode}
                       onChange={(e) => setPostalCode(e.target.value)}
-                      className="VELORA-form-input"
+                      className="VALERUNE-form-input"
                     />
                   </div>
                   <div className="form-field">
@@ -212,7 +212,7 @@ export const CheckoutPage: React.FC = () => {
                       type="text"
                       disabled
                       value="India"
-                      className="VELORA-form-input disabled"
+                      className="VALERUNE-form-input disabled"
                     />
                   </div>
                 </div>
@@ -324,7 +324,7 @@ export const CheckoutPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="btn-VELORA-primary place-order-btn"
+                  className="btn-VALERUNE-primary place-order-btn"
                 >
                   <CheckCircle2 size={18} />
                   <span>{submitting ? 'PLACING ORDER...' : 'PLACE ORDER'}</span>
@@ -341,4 +341,5 @@ export const CheckoutPage: React.FC = () => {
     </div>
   );
 };
+
 

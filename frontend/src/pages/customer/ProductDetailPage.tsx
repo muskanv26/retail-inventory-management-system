@@ -77,8 +77,8 @@ export const ProductDetailPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="VELORA-loading-container" style={{ minHeight: '60vh' }}>
-        <div className="VELORA-spinner"></div>
+      <div className="VALERUNE-loading-container" style={{ minHeight: '60vh' }}>
+        <div className="VALERUNE-spinner"></div>
         <p style={{ marginTop: '1rem', color: 'var(--store-text-muted)', fontSize: '0.9rem' }}>
           Loading item detail...
         </p>
@@ -93,7 +93,7 @@ export const ProductDetailPage: React.FC = () => {
         <p style={{ color: 'var(--store-text-secondary)', margin: '1rem 0 2rem' }}>
           The requested product could not be found or has been moved.
         </p>
-        <Link to="/shop" className="btn-VELORA-primary">Browse All Products</Link>
+        <Link to="/shop" className="btn-VALERUNE-primary">Browse All Products</Link>
       </div>
     );
   }
@@ -135,7 +135,7 @@ export const ProductDetailPage: React.FC = () => {
     .slice(0, 4);
 
   return (
-    <div className="VELORA-product-detail-page">
+    <div className="VALERUNE-product-detail-page">
       {/* BREADCRUMB */}
       <div className="shop-breadcrumb" style={{ maxWidth: '1280px', margin: '0 auto 2rem', padding: '0 1.5rem' }}>
         <Link to="/">HOME</Link>
@@ -173,7 +173,7 @@ export const ProductDetailPage: React.FC = () => {
 
         {/* RIGHT PRODUCT INFO */}
         <div className="detail-info-column">
-          <div className="detail-brand-name">{product.brand || 'VELORA Core'}</div>
+          <div className="detail-brand-name">{product.brand || 'VALERUNE Core'}</div>
           <h1 className="detail-product-name">{product.name}</h1>
 
           {/* RATING */}
@@ -319,7 +319,7 @@ export const ProductDetailPage: React.FC = () => {
 
       {/* RECOMMENDED PRODUCTS SECTION */}
       {relatedProducts.length > 0 && (
-        <section className="VELORA-section" style={{ marginTop: '5rem', borderTop: '1px solid var(--store-border)', paddingTop: '4rem' }}>
+        <section className="VALERUNE-section" style={{ marginTop: '5rem', borderTop: '1px solid var(--store-border)', paddingTop: '4rem' }}>
           <div className="section-header-centered">
             <span className="section-sub">COMPLEMENTARY ITEMS</span>
             <h2 className="section-title">You May Also Like</h2>
@@ -335,4 +335,5 @@ export const ProductDetailPage: React.FC = () => {
     </div>
   );
 };
+
 

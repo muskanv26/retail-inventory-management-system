@@ -1,8 +1,8 @@
-# Web-Based Retail Inventory Management System (VELORA)
+# Web-Based Retail Inventory Management System (VALERUNE)
 
 A full-stack, enterprise-grade **Web-Based Retail Inventory Management System** built for a college capstone project. The application features a customer-facing e-commerce storefront alongside a dedicated operational inventory management portal for administration.
 
-The fictional brand **VELORA** (*"Everyday, Reimagined."*) is used consistently throughout the project dataset, UI, and documentation.
+The fictional brand **VALERUNE** (*"Everyday, Reimagined."*) is used consistently throughout the project dataset, UI, and documentation.
 
 ---
 
@@ -49,7 +49,7 @@ This capstone project addresses end-to-end retail supply chain operations, bridg
 * **Home Page**: Hero banner, curated category collections, featured products, and value propositions.
 * **Product Catalog (`/shop`)**: Multi-attribute filtering (category, price range), keyword search, sorting (price low-high, high-low, rating), and dynamic pagination.
 * **Product Detail Page (`/products/:id`)**: High-resolution image gallery, SKU information, price/original price breakdown, size/color selectors, real-time stock availability alerts, and detailed specifications.
-* **Shopping Cart & Wishlist**: Interactive quantity updates, item removal, promotional discount code integration (`VELORA10`), and wishlist item management.
+* **Shopping Cart & Wishlist**: Interactive quantity updates, item removal, promotional discount code integration (`VALERUNE10`), and wishlist item management.
 * **Order Placement & Checkout**: Multi-step checkout process with shipping address inputs, payment method selection, order summaries, and immediate order placement.
 * **Order History & Account Profile**: Customer dashboard for tracking placed orders, order status indicators, and account management.
 
@@ -311,7 +311,7 @@ retail-inventory-management-system/
 
 The application initializes a fictional dataset via `DataInitializer.java` upon first startup:
 
-* **50 Fictional Retail Products**: SKUs `VLR-TOP-001` through `VLR-BAG-050`, organized into sub-collections (*VELORA Core*, *VELORA Studio*, *VELORA Tailored*, *VELORA Elements*, *VELORA Denim*, *VELORA Active*).
+* **50 Fictional Retail Products**: SKUs `VAL-TOP-001` through `VAL-BAG-050`, organized into sub-collections (*VALERUNE Core*, *VALERUNE Studio*, *VALERUNE Tailored*, *VALERUNE Elements*, *VALERUNE Denim*, *VALERUNE Active*).
 * **4 Regional Distribution Centers**:
   1. `WH-NORTH` — North Region Distribution Center (Gurugram)
   2. `WH-CENTRAL` — Central Operations Fulfillment Hub (Mumbai)
@@ -355,3 +355,4 @@ The application initializes a fictional dataset via `DataInitializer.java` upon 
 
 ## 📄 License
 This project is created strictly for academic and educational demonstration purposes as part of a college software engineering coursework submission.
+

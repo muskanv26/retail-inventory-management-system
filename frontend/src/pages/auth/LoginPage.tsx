@@ -9,7 +9,7 @@ export const LoginPage: React.FC = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState('customer@VELORA.test');
+  const [email, setEmail] = useState('customer@VALERUNE.test');
   const [password, setPassword] = useState('password123');
   const [selectedRole, setSelectedRole] = useState<Role>('CUSTOMER');
   const [loading, setLoading] = useState<boolean>(false);
@@ -48,7 +48,7 @@ export const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="VELORA-auth-page">
+    <div className="VALERUNE-auth-page">
       <div className="auth-card">
         <div className="auth-header">
           <Link to="/" className="auth-brand-logo">
@@ -92,7 +92,7 @@ export const LoginPage: React.FC = () => {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="VELORA-form-input"
+              className="VALERUNE-form-input"
             />
           </div>
 
@@ -103,21 +103,22 @@ export const LoginPage: React.FC = () => {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="VELORA-form-input"
+              className="VALERUNE-form-input"
             />
           </div>
 
-          <button type="submit" disabled={loading} className="btn-VELORA-primary auth-submit-btn">
+          <button type="submit" disabled={loading} className="btn-VALERUNE-primary auth-submit-btn">
             <span>{loading ? 'AUTHENTICATING...' : `SIGN IN TO ${selectedRole}`}</span>
             <ArrowRight size={16} />
           </button>
         </form>
 
         <div className="auth-footer-link">
-          Don&apos;t have an account? <Link to="/register">Create a VELORA Account</Link>
+          Don&apos;t have an account? <Link to="/register">Create a VALERUNE Account</Link>
         </div>
       </div>
     </div>
   );
 };
+
 

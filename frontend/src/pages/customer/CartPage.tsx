@@ -24,10 +24,10 @@ export const CartPage: React.FC = () => {
   const handleApplyCoupon = (e: React.FormEvent) => {
     e.preventDefault();
     setCouponError('');
-    if (couponCode.trim().toUpperCase() === 'VELORA15') {
+    if (couponCode.trim().toUpperCase() === 'VALERUNE15') {
       setCouponApplied(true);
     } else {
-      setCouponError('Invalid promo code. Try VELORA15');
+      setCouponError('Invalid promo code. Try VALERUNE15');
     }
   };
 
@@ -38,7 +38,7 @@ export const CartPage: React.FC = () => {
 
   if (cartItems.length === 0) {
     return (
-      <div className="VELORA-cart-empty-page">
+      <div className="VALERUNE-cart-empty-page">
         <div className="empty-cart-card">
           <div className="empty-cart-icon">
             <ShoppingBag size={48} />
@@ -47,7 +47,7 @@ export const CartPage: React.FC = () => {
           <p className="empty-subtitle">
             Your bag is waiting. Discover everyday essentials and elevated wear from our catalog.
           </p>
-          <Link to="/shop" className="btn-VELORA-primary">
+          <Link to="/shop" className="btn-VALERUNE-primary">
             <span>START SHOPPING</span>
             <ArrowRight size={16} />
           </Link>
@@ -57,7 +57,7 @@ export const CartPage: React.FC = () => {
   }
 
   return (
-    <div className="VELORA-cart-page">
+    <div className="VALERUNE-cart-page">
       {/* PAGE TITLE */}
       <div className="cart-header-row">
         <div>
@@ -104,7 +104,7 @@ export const CartPage: React.FC = () => {
                 </Link>
 
                 <div className="bag-item-info">
-                  <div className="bag-item-brand">{product.brand || 'VELORA Core'}</div>
+                  <div className="bag-item-brand">{product.brand || 'VALERUNE Core'}</div>
                   <Link to={`/products/${product.id}`} className="bag-item-title">
                     {product.name}
                   </Link>
@@ -178,14 +178,14 @@ export const CartPage: React.FC = () => {
               </label>
               {couponApplied ? (
                 <div className="coupon-applied-badge">
-                  <span>PROMO CODE &quot;VELORA15&quot; APPLIED</span>
+                  <span>PROMO CODE &quot;VALERUNE15&quot; APPLIED</span>
                   <button onClick={() => setCouponApplied(false)}><X size={14} /></button>
                 </div>
               ) : (
                 <form onSubmit={handleApplyCoupon} className="coupon-form">
                   <input
                     type="text"
-                    placeholder="Enter VELORA15"
+                    placeholder="Enter VALERUNE15"
                     value={couponCode}
                     onChange={(e) => setCouponCode(e.target.value)}
                     className="coupon-input"
@@ -205,7 +205,7 @@ export const CartPage: React.FC = () => {
 
               {couponDiscount > 0 && (
                 <div className="summary-row discount">
-                  <span>Promo Discount (VELORA15)</span>
+                  <span>Promo Discount (VALERUNE15)</span>
                   <span>-₹{couponDiscount.toLocaleString('en-IN')}</span>
                 </div>
               )}
@@ -227,7 +227,7 @@ export const CartPage: React.FC = () => {
 
             <button
               onClick={() => navigate('/checkout')}
-              className="btn-VELORA-primary place-order-btn"
+              className="btn-VALERUNE-primary place-order-btn"
             >
               <span>PROCEED TO CHECKOUT</span>
               <ArrowRight size={16} />
@@ -238,4 +238,5 @@ export const CartPage: React.FC = () => {
     </div>
   );
 };
+
 

@@ -31,7 +31,7 @@ export const RegisterPage: React.FC = () => {
     } catch (err: any) {
       const fallbackUser = {
         id: `usr-${Date.now()}`,
-        name: name || 'VELORA Customer',
+        name: name || 'VALERUNE Customer',
         email: email,
         role: 'CUSTOMER' as const,
       };
@@ -43,7 +43,7 @@ export const RegisterPage: React.FC = () => {
   };
 
   return (
-    <div className="VELORA-auth-page">
+    <div className="VALERUNE-auth-page">
       <div className="auth-card">
         <div className="auth-header">
           <Link to="/" className="auth-brand-logo">
@@ -51,7 +51,7 @@ export const RegisterPage: React.FC = () => {
             <span className="brand-sub">ESSENTIAL &amp; ELEVATED WEAR</span>
           </Link>
           <h1 className="auth-title">Create Account</h1>
-          <p className="auth-subtitle">Join VELORA to enjoy personalized shopping &amp; order tracking</p>
+          <p className="auth-subtitle">Join VALERUNE to enjoy personalized shopping &amp; order tracking</p>
         </div>
 
         {error && (
@@ -70,7 +70,7 @@ export const RegisterPage: React.FC = () => {
               placeholder="e.g. Alex Sharma"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="VELORA-form-input"
+              className="VALERUNE-form-input"
             />
           </div>
 
@@ -82,7 +82,7 @@ export const RegisterPage: React.FC = () => {
               placeholder="alex@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="VELORA-form-input"
+              className="VALERUNE-form-input"
             />
           </div>
 
@@ -94,11 +94,11 @@ export const RegisterPage: React.FC = () => {
               placeholder="••••••••"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="VELORA-form-input"
+              className="VALERUNE-form-input"
             />
           </div>
 
-          <button type="submit" disabled={loading} className="btn-VELORA-primary auth-submit-btn">
+          <button type="submit" disabled={loading} className="btn-VALERUNE-primary auth-submit-btn">
             <span>{loading ? 'CREATING ACCOUNT...' : 'CREATE ACCOUNT'}</span>
             <ArrowRight size={16} />
           </button>
@@ -111,4 +111,5 @@ export const RegisterPage: React.FC = () => {
     </div>
   );
 };
+
 

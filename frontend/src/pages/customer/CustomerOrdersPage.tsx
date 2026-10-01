@@ -52,7 +52,7 @@ export const CustomerOrdersPage: React.FC = () => {
   });
 
   return (
-    <div className="VELORA-orders-page">
+    <div className="VALERUNE-orders-page">
       <div className="orders-header-row">
         <div>
           <h1 className="orders-page-title">MY ORDERS</h1>
@@ -83,8 +83,8 @@ export const CustomerOrdersPage: React.FC = () => {
 
       {/* ORDERS LIST */}
       {loading ? (
-        <div className="VELORA-loading-container">
-          <div className="VELORA-spinner"></div>
+        <div className="VALERUNE-loading-container">
+          <div className="VALERUNE-spinner"></div>
           <p style={{ marginTop: '1rem', color: 'var(--store-text-muted)', fontSize: '0.9rem' }}>
             Fetching order history...
           </p>
@@ -92,14 +92,14 @@ export const CustomerOrdersPage: React.FC = () => {
       ) : error ? (
         <div className="fashion-error-box">
           <p>{error}</p>
-          <button onClick={fetchOrders} className="btn-VELORA-primary" style={{ marginTop: '1rem' }}>RETRY</button>
+          <button onClick={fetchOrders} className="btn-VALERUNE-primary" style={{ marginTop: '1rem' }}>RETRY</button>
         </div>
       ) : filteredOrders.length === 0 ? (
         <div className="fashion-empty-box">
           <ShoppingBag size={48} style={{ color: 'var(--store-text-muted)', marginBottom: '1rem' }} />
           <h3>No orders found</h3>
           <p>You haven&apos;t placed any orders in this status yet.</p>
-          <Link to="/shop" className="btn-VELORA-primary" style={{ marginTop: '1.5rem' }}>START SHOPPING</Link>
+          <Link to="/shop" className="btn-VALERUNE-primary" style={{ marginTop: '1.5rem' }}>START SHOPPING</Link>
         </div>
       ) : (
         <div className="orders-list-container">
@@ -150,4 +150,5 @@ export const CustomerOrdersPage: React.FC = () => {
     </div>
   );
 };
+
 

@@ -13,7 +13,7 @@ interface WishlistContextType {
 
 const WishlistContext = createContext<WishlistContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'VELORA_wishlist';
+const STORAGE_KEY = 'VALERUNE_wishlist';
 
 export const WishlistProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [wishlistItems, setWishlistItems] = useState<Product[]>(() => {
@@ -84,4 +84,5 @@ export const useWishlist = () => {
   }
   return context;
 };
+
 

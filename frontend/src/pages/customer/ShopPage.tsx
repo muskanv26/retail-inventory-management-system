@@ -110,7 +110,7 @@ export const ShopPage: React.FC = () => {
   };
 
   return (
-    <div className="VELORA-shop-page">
+    <div className="VALERUNE-shop-page">
       {/* BREADCRUMB */}
       <div className="shop-breadcrumb">
         <Link to="/">HOME</Link>
@@ -266,7 +266,7 @@ export const ShopPage: React.FC = () => {
           ) : error ? (
             <div className="fashion-error-box">
               <p>{error}</p>
-              <button onClick={fetchData} className="btn-VELORA-primary" style={{ marginTop: '1rem' }}>
+              <button onClick={fetchData} className="btn-VALERUNE-primary" style={{ marginTop: '1rem' }}>
                 <RefreshCw size={14} style={{ marginRight: '6px' }} /> Retry Loading
               </button>
             </div>
@@ -274,7 +274,7 @@ export const ShopPage: React.FC = () => {
             <div className="fashion-empty-box">
               <h3>No items found</h3>
               <p>We couldn&apos;t find any products matching your selected filters or search terms.</p>
-              <button onClick={handleClearFilters} className="btn-VELORA-primary" style={{ marginTop: '1rem' }}>
+              <button onClick={handleClearFilters} className="btn-VALERUNE-primary" style={{ marginTop: '1rem' }}>
                 CLEAR ALL FILTERS
               </button>
             </div>
@@ -318,8 +318,8 @@ export const ShopPage: React.FC = () => {
               </div>
             </div>
             <div className="mobile-drawer-footer">
-              <button onClick={handleClearFilters} className="btn-VELORA-outline" style={{ flex: 1 }}>Reset</button>
-              <button onClick={() => setFilterDrawerOpen(false)} className="btn-VELORA-primary" style={{ flex: 1 }}>Apply</button>
+              <button onClick={handleClearFilters} className="btn-VALERUNE-outline" style={{ flex: 1 }}>Reset</button>
+              <button onClick={() => setFilterDrawerOpen(false)} className="btn-VALERUNE-primary" style={{ flex: 1 }}>Apply</button>
             </div>
           </div>
         </div>
@@ -327,4 +327,5 @@ export const ShopPage: React.FC = () => {
     </div>
   );
 };
+
 

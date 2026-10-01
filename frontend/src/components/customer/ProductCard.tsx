@@ -126,7 +126,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, availableStoc
 
       <div className="fashion-card-details">
         <div className="fashion-card-meta">
-          <span className="fashion-brand">{product.brand || 'VELORA Core'}</span>
+          <span className="fashion-brand">{product.brand || 'VALERUNE Core'}</span>
           <div className="fashion-rating">
             <Star size={12} fill="#f59e0b" color="#f59e0b" />
             <span>{ratingValue.toFixed(1)}</span>
@@ -148,4 +148,5 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, availableStoc
     </div>
   );
 };
+
 

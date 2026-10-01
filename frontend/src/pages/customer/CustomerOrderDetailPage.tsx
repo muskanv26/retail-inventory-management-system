@@ -31,8 +31,8 @@ export const CustomerOrderDetailPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="VELORA-loading-container" style={{ minHeight: '60vh' }}>
-        <div className="VELORA-spinner"></div>
+      <div className="VALERUNE-loading-container" style={{ minHeight: '60vh' }}>
+        <div className="VALERUNE-spinner"></div>
         <p style={{ marginTop: '1rem', color: 'var(--store-text-muted)', fontSize: '0.9rem' }}>
           Retrieving order details...
         </p>
@@ -45,7 +45,7 @@ export const CustomerOrderDetailPage: React.FC = () => {
       <div style={{ maxWidth: '800px', margin: '4rem auto', padding: '0 1.5rem', textAlign: 'center' }}>
         <h2>Order Not Found</h2>
         <p style={{ color: 'var(--store-text-secondary)', margin: '1rem 0 2rem' }}>{error}</p>
-        <Link to="/orders" className="btn-VELORA-primary">Back to My Orders</Link>
+        <Link to="/orders" className="btn-VALERUNE-primary">Back to My Orders</Link>
       </div>
     );
   }
@@ -74,7 +74,7 @@ export const CustomerOrderDetailPage: React.FC = () => {
   });
 
   return (
-    <div className="VELORA-order-detail-page">
+    <div className="VALERUNE-order-detail-page">
       <Link to="/orders" className="return-cart-link" style={{ maxWidth: '960px', margin: '0 auto 2rem' }}>
         <ArrowLeft size={16} /> Back to My Orders
       </Link>
@@ -107,7 +107,7 @@ export const CustomerOrderDetailPage: React.FC = () => {
               return (
                 <div key={item.id} className="table-item-row">
                   <div className="item-meta">
-                    <span className="item-name">{item.productName || 'VELORA Item'}</span>
+                    <span className="item-name">{item.productName || 'VALERUNE Item'}</span>
                     <span className="item-sku">SKU Ref: {item.productSku}</span>
                   </div>
 
@@ -140,4 +140,5 @@ export const CustomerOrderDetailPage: React.FC = () => {
     </div>
   );
 };
+
 

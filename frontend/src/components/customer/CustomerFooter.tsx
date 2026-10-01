@@ -15,9 +15,9 @@ export const CustomerFooter: React.FC = () => {
   };
 
   return (
-    <footer className="VELORA-footer">
+    <footer className="VALERUNE-footer">
       {/* VALUE PROPOSITION STRIP */}
-      <div className="VELORA-benefits-bar">
+      <div className="VALERUNE-benefits-bar">
         <div className="benefits-inner">
           <div className="benefit-item">
             <Truck size={24} className="benefit-icon" />
@@ -54,7 +54,7 @@ export const CustomerFooter: React.FC = () => {
       </div>
 
       {/* MAIN FOOTER NAVIGATION */}
-      <div className="VELORA-footer-main">
+      <div className="VALERUNE-footer-main">
         <div className="footer-columns">
           {/* BRAND & NEWSLETTER */}
           <div className="footer-col brand-col">
@@ -71,7 +71,7 @@ export const CustomerFooter: React.FC = () => {
               <p className="newsletter-desc">Get early access to seasonal edits, restocks, and product releases.</p>
               {subscribed ? (
                 <div className="newsletter-success">
-                  <Check size={16} /> Thank you for subscribing to VELORA.
+                  <Check size={16} /> Thank you for subscribing to VALERUNE.
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="newsletter-form">
@@ -119,9 +119,9 @@ export const CustomerFooter: React.FC = () => {
             </ul>
           </div>
 
-          {/* ABOUT VELORA */}
+          {/* ABOUT VALERUNE */}
           <div className="footer-col">
-            <h4 className="footer-col-title">ABOUT VELORA</h4>
+            <h4 className="footer-col-title">ABOUT VALERUNE</h4>
             <ul className="footer-links">
               <li><a href="#story">Our Design Ethos</a></li>
               <li><a href="#sustainability">Materials &amp; Craft</a></li>
@@ -138,9 +138,9 @@ export const CustomerFooter: React.FC = () => {
       </div>
 
       {/* FOOTER BOTTOM */}
-      <div className="VELORA-footer-bottom">
+      <div className="VALERUNE-footer-bottom">
         <div className="footer-bottom-inner">
-          <p>© {new Date().getFullYear()} VELORA Essential &amp; Elevated Wear. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} VALERUNE Essential &amp; Elevated Wear. All rights reserved.</p>
           <div className="payment-badges">
             <span className="pay-badge">VISA</span>
             <span className="pay-badge">MASTERCARD</span>
@@ -153,4 +153,5 @@ export const CustomerFooter: React.FC = () => {
     </footer>
   );
 };
+
 
