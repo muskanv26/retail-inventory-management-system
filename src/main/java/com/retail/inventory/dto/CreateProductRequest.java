@@ -35,6 +35,16 @@ public class CreateProductRequest {
     @DecimalMin(value = "0.0", inclusive = false, message = "Unit price must be greater than zero")
     private BigDecimal unitPrice;
 
+    private String brand;
+    private String gender;
+    private String imageUrl;
+    private String secondaryImageUrl;
+    private BigDecimal originalPrice;
+    private Double rating;
+    private Integer reviewCount;
+    private String sizes;
+    private String colors;
+
     @Builder.Default
     private boolean active = true;
 }

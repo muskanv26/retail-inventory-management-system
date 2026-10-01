@@ -34,6 +34,15 @@ public class ProductService {
                 .description(request.getDescription() != null ? request.getDescription().trim() : null)
                 .category(request.getCategory().trim())
                 .unitPrice(request.getUnitPrice())
+                .brand(request.getBrand())
+                .gender(request.getGender())
+                .imageUrl(request.getImageUrl())
+                .secondaryImageUrl(request.getSecondaryImageUrl())
+                .originalPrice(request.getOriginalPrice())
+                .rating(request.getRating())
+                .reviewCount(request.getReviewCount())
+                .sizes(request.getSizes())
+                .colors(request.getColors())
                 .active(request.isActive())
                 .build();
 
@@ -69,6 +78,15 @@ public class ProductService {
         existingProduct.setDescription(request.getDescription() != null ? request.getDescription().trim() : null);
         existingProduct.setCategory(request.getCategory().trim());
         existingProduct.setUnitPrice(request.getUnitPrice());
+        existingProduct.setBrand(request.getBrand());
+        existingProduct.setGender(request.getGender());
+        existingProduct.setImageUrl(request.getImageUrl());
+        existingProduct.setSecondaryImageUrl(request.getSecondaryImageUrl());
+        existingProduct.setOriginalPrice(request.getOriginalPrice());
+        existingProduct.setRating(request.getRating());
+        existingProduct.setReviewCount(request.getReviewCount());
+        existingProduct.setSizes(request.getSizes());
+        existingProduct.setColors(request.getColors());
         existingProduct.setActive(request.isActive());
 
         Product updatedProduct = productRepository.save(existingProduct);
@@ -91,6 +109,15 @@ public class ProductService {
                 .description(product.getDescription())
                 .category(product.getCategory())
                 .unitPrice(product.getUnitPrice())
+                .brand(product.getBrand())
+                .gender(product.getGender())
+                .imageUrl(product.getImageUrl())
+                .secondaryImageUrl(product.getSecondaryImageUrl())
+                .originalPrice(product.getOriginalPrice())
+                .rating(product.getRating())
+                .reviewCount(product.getReviewCount())
+                .sizes(product.getSizes())
+                .colors(product.getColors())
                 .active(product.isActive())
                 .createdAt(product.getCreatedAt())
                 .updatedAt(product.getUpdatedAt())

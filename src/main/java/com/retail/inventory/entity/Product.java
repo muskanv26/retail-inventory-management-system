@@ -46,6 +46,33 @@ public class Product {
     @Column(name = "unit_price", nullable = false, precision = 12, scale = 2)
     private BigDecimal unitPrice;
 
+    @Column(length = 100)
+    private String brand;
+
+    @Column(length = 20)
+    private String gender;
+
+    @Column(name = "image_url", columnDefinition = "TEXT")
+    private String imageUrl;
+
+    @Column(name = "secondary_image_url", columnDefinition = "TEXT")
+    private String secondaryImageUrl;
+
+    @Column(name = "original_price", precision = 12, scale = 2)
+    private BigDecimal originalPrice;
+
+    @Column
+    private Double rating;
+
+    @Column(name = "review_count")
+    private Integer reviewCount;
+
+    @Column(length = 100)
+    private String sizes;
+
+    @Column(length = 100)
+    private String colors;
+
     @Column(nullable = false)
     @Builder.Default
     private boolean active = true;
